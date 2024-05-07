@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^13.8.1"
+    "cypress": "^13.8.1",
+    "dayjs": "^1.11.11"
   }
 }
