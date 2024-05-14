@@ -2,7 +2,7 @@
 
 describe ('Cadastro de Usuário', () => {
     it('Fluxo Básico', () => {
-
+        
     })
 
     it('Fluxo Alternativo', () => {
