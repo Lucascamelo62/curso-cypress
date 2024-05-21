@@ -8,13 +8,13 @@ describe('Acessando uma página', () => {
     it('Acessando URL aquino e encontrando title', () => {
         cy.title()
             .should('be.equal', 'Campo de Treinamento')
-            .should('contains', 'Campo');
+            .should('contains', 'Campo')
     })
 
     it('Interagindo com o botão', () => {
         cy.get('#buttonSimple')
             .click()
-            .should('have.value', 'Obrigado!');
+            .should('have.value', 'Obrigado!')
     })
 })
 
@@ -29,7 +29,7 @@ describe('Interagindo com inputs de texto', () => {
     it('Encontrando elemento nome', () => {
         cy.get('#formNome')
         .type('Teste')
-        .should('have.value', 'Teste');
+        .should('have.value', 'Teste')
     })
 
     it('Encontrando elemento sugestão', () => {
@@ -40,5 +40,17 @@ describe('Interagindo com inputs de texto', () => {
 
     it('Encontrando elemento input', () => {
         cy.get('#tabelaUsuarios > :nth-child(2) > :nth-child(1) > :nth-child(6) > input').type('OIOIOI{selectall}TCHAU');
+    })
+})
+
+describe('Encontrando elementos RadioButton', () => {
+    it('RadioButton', () => {
+        cy.get('[name=formSexo]').should('have.length', 2)
+
+        cy.get('#formSexoMasc')
+            .click()
+            .should('be.checked')
+
+        cy.get('#formSexoFem').should('not.be.checked')
     })
 })
