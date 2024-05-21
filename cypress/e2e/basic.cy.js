@@ -54,3 +54,17 @@ describe('Encontrando elementos RadioButton', () => {
         cy.get('#formSexoFem').should('not.be.checked')
     })
 })
+
+describe('Interagindo com checkbox', () => {
+    it('Marcando multiplos checkbox', () => {
+        cy.get('[name=formComidaFavorita]').click({multiple:true})
+    })
+})
+
+describe('Interagidno com combo dropdown', () => {
+    it('Selecionando um elemento de um dropdown', () => {
+        cy.get('[name=formEscolaridade]')
+            .select('1graucomp')
+            .should('have.value', '1graucomps')
+    })
+})
