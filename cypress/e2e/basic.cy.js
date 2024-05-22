@@ -65,6 +65,6 @@ describe('Interagidno com combo dropdown', () => {
     it('Selecionando um elemento de um dropdown', () => {
         cy.get('[name=formEscolaridade]')
             .select('1graucomp')
-            .should('have.value', '1graucomps')
+            .should('have.value', '1graucomp')
     })
 })
