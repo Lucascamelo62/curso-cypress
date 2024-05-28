@@ -4,7 +4,7 @@ beforeEach(() => {
     cy.visit('https://wcaquino.me/cypress/componentes.html');
 })
 
-describe('Acessando uma página', () => {
+describe.only('Acessando uma página', () => {
     it('Acessando URL aquino e encontrando title', () => {
         cy.title()
             .should('be.equal', 'Campo de Treinamento')

@@ -14,7 +14,6 @@ describe('Sincronismo', () => {
         cy.get('#buttonDelay').click()
         cy.get('#novoCampo').should('not.exist')
         cy.get('#novoCampo').should('exist')
-        cy.get('#novoCampo').should('not.exist')
         cy.get('#novoCampo').type('Testando')
     })
 })
