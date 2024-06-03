@@ -19,4 +19,14 @@ describe('Testando alert', () => {
             expect(stub.getCall(0)).to.be.calledWith('Alert Simples')
         })
     })
+
+    it('Utilizando confirm', () => {
+        cy.get('#confirm').click()
+        cy.on('window:confirm', (text) => {
+            expect(text).to.be.eq('Confirm Simples')
+        })
+        cy.on('window:alert', (text) => {
+            expect(text).to.be.eq('Confirmado')
+        })
+    })
 })
